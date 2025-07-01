@@ -15,7 +15,7 @@ public final class MinecraftTutorial extends JavaPlugin {
     @Override
     public void onDisable() {
         // Plugin shutdown logic
-        getLogger().info("My First Tutorial Plugin Disabled!");    HandlerList.unregisterAll(this);
+        getLogger().info("My First Tutorial Plugin Disabled!");
         HandlerList.unregisterAll(this);
     }
 }
