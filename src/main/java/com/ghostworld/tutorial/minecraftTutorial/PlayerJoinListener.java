@@ -9,6 +9,6 @@ public class PlayerJoinListener implements Listener {
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent event) {
         Player player = event.getPlayer();
-        player.sendMessage("Hello " + player.getName()+"!");
+        player.sendTitle("Hello " + player.getName() + "!", "Welcome to the server!", 10, 70, 20);
     }
 }
