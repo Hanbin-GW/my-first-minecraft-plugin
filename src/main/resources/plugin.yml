@@ -1,0 +1,4 @@
+name: MinecraftTutorial
+version: '1.0-SNAPSHOT'
+main: com.ghostworld.tutorial.minecraftTutorial.MinecraftTutorial
+api-version: '1.21'
