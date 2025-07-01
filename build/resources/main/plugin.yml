@@ -2,3 +2,8 @@ name: MinecraftTutorial
 version: '1.0-SNAPSHOT'
 main: com.ghostworld.tutorial.minecraftTutorial.MinecraftTutorial
 api-version: '1.21'
+
+commands:
+  givesword:
+    description: 전설의 검을 지급합니다
+    usage: /givesword

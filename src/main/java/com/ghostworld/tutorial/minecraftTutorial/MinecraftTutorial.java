@@ -10,6 +10,7 @@ public final class MinecraftTutorial extends JavaPlugin {
         // Plugin startup logic
         getLogger().info("My First Tutorial Plugin Enabled!");
         getServer().getPluginManager().registerEvents(new PlayerJoinListener(), this);
+        getCommand("givesword").setExecutor(new GiveSwordCommand());
     }
 
     @Override
