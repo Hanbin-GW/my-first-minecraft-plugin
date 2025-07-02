@@ -24,8 +24,6 @@ public class CustomItemListener implements Listener {
 
         String name = ChatColor.stripColor(item.getItemMeta().getDisplayName());
         if (!name.equals("Drill")) return;
-
-        player.sendMessage("§a[DEBUG] Drill 사용됨!");
         block.breakNaturally(item);
         player.swingMainHand();
     }
