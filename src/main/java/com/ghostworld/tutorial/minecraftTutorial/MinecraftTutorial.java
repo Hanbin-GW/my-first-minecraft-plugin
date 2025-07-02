@@ -1,5 +1,6 @@
 package com.ghostworld.tutorial.minecraftTutorial;
 
+import org.bukkit.Bukkit;
 import org.bukkit.event.HandlerList;
 import org.bukkit.plugin.java.JavaPlugin;
 

@@ -24,6 +24,7 @@ public class CustomItemFactory {
         ItemMeta meta = item.getItemMeta();
         meta.setDisplayName("Drill");
         meta.setLore(List.of("아주빠르게 블록을 캡니다"));
+        item.setItemMeta(meta);
         return item;
     }
 }
