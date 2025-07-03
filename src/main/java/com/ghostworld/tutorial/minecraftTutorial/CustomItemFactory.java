@@ -27,4 +27,11 @@ public class CustomItemFactory {
         item.setItemMeta(meta);
         return item;
     }
+    public static ItemStack createShotgunArrow(){
+        ItemStack item = new ItemStack(Material.BOW);
+        ItemMeta meta = item.getItemMeta();
+        meta.setDisplayName("Shotgun Arrow");
+        item.setItemMeta(meta);
+        return item;
+    }
 }

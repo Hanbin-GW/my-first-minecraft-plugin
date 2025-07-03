@@ -31,6 +31,11 @@ public class GiveItemCommand implements CommandExecutor {
                 player.sendMessage("슈퍼 드릴을 지급했습니다!");
                 break;
 
+            case "shotgun":
+                item = CustomItemFactory.createShotgunArrow();
+                player.sendMessage("샷건 화살이 지금되었습니다!");
+                break;
+
             default:
                 player.sendMessage("알 수 없는 아이템 종류입니다. 사용법: /giveitem <sword|drill>");
                 return true;
