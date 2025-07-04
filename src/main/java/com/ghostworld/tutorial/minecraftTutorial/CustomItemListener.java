@@ -2,6 +2,7 @@ package com.ghostworld.tutorial.minecraftTutorial;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
+import org.bukkit.Sound;
 import org.bukkit.block.Block;
 import org.bukkit.entity.AbstractArrow;
 import org.bukkit.entity.Arrow;
@@ -62,8 +63,12 @@ public class CustomItemListener implements Listener {
 
             spread = spread.add(new Vector(yawSpread, pitchSpread, yawSpread)).normalize();
             arrow.setVelocity(spread.multiply(2.0));
+            player.getWorld().playSound(
+                    player.getLocation(),
+                    Sound.ENTITY_ARROW_SHOOT, // 또는 원하는 사운드
+                    1.0f,  // 볼륨
+                    1.0f   // 피치 (1.0 = 원래 소리, 2.0 = 빠르고 날카로움)
+            );
         }
     }
-
-
 }
