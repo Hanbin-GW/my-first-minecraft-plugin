@@ -11,7 +11,7 @@ public class PlayerJoinListener implements Listener {
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent event) {
         Player player = event.getPlayer();
-        player.setResourcePack("https://www.ghost-world.co.kr/static/GW_Resource_Pack.zip", Base64.getDecoder().decode("467c860b4ed4e881322095322e6dc98aae533d65"),true);
+        player.setResourcePack("https://www.ghost-world.co.kr/static/GW_Resource_Pack.zip", "467c860b4ed4e881322095322e6dc98aae533d65",true);
         player.sendTitle("Hello " + player.getName() + "!", "Welcome to the server!", 10, 70, 20);
     }
 }
