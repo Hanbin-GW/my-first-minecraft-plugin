@@ -32,7 +32,7 @@ public class CustomItemListener implements Listener {
         String name = ChatColor.stripColor(item.getItemMeta().getDisplayName());
         if (!name.equals("Drill")) return;
         Key key = Key.key("ghostcraft", "drilling");
-        Sound sound = Sound.sound(key, Sound.Source.MASTER, 1.0f, 1.0f);
+        Sound sound = Sound.sound(key, Sound.Source.MASTER, 0.8f, 1.0f);
         player.playSound(sound);
         block.breakNaturally(item);
         player.swingMainHand();
