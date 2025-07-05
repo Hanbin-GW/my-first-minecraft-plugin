@@ -16,6 +16,7 @@ public class CustomItemFactory {
         meta.setLore(List.of("무제한의 내구성을 가지고 있습니다!"));
         meta.setUnbreakable(true);
         meta.addEnchant(Enchantment.POWER, 255, true);
+        meta.addEnchant(Enchantment.FLAME, 255, true);
         item.setItemMeta(meta);
         return item;
     }
