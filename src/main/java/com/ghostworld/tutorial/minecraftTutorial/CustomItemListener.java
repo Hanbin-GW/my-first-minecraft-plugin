@@ -48,25 +48,32 @@ public class CustomItemListener implements Listener {
 
         // 커스텀 활 여부 확인 (예: 이름 비교 또는 PersistentDataContainer 사용)
         String displayName = bow.getItemMeta().getDisplayName();
-        if (!"Shotgun Arrow".equals(displayName)) return;
+        String name = ChatColor.stripColor(bow.getItemMeta().getDisplayName());
+        if("BFC".equals(displayName))
+        {
 
-        // 원래 화살은 그대로 두고, 추가 화살 4개 발사
-        Location loc = player.getEyeLocation();
-        Vector direction = loc.getDirection().normalize();
+        }
 
-        for (int i = 0; i < 4; i++) {
-            Arrow arrow = player.getWorld().spawnArrow(loc, direction, 2.0f, 1.0f);
-            arrow.setShooter(player);
-            arrow.setPickupStatus(AbstractArrow.PickupStatus.DISALLOWED);
+        else if ("Shotgun Arrow".equals(displayName)) {
 
-            // 산탄 퍼짐: 방향 약간 회전
-            Vector spread = direction.clone();
+            // 원래 화살은 그대로 두고, 추가 화살 4개 발사
+            Location loc = player.getEyeLocation();
+            Vector direction = loc.getDirection().normalize();
 
-            double yawSpread = (Math.random() - 0.5) * 0.4; // 좌우
-            double pitchSpread = (Math.random() - 0.5) * 0.4; // 상하
+            for (int i = 0; i < 4; i++) {
+                Arrow arrow = player.getWorld().spawnArrow(loc, direction, 2.0f, 1.0f);
+                arrow.setShooter(player);
+                arrow.setPickupStatus(AbstractArrow.PickupStatus.DISALLOWED);
 
-            spread = spread.add(new Vector(yawSpread, pitchSpread, yawSpread)).normalize();
-            arrow.setVelocity(spread.multiply(2.0));
+                // 산탄 퍼짐: 방향 약간 회전
+                Vector spread = direction.clone();
+
+                double yawSpread = (Math.random() - 0.5) * 0.4; // 좌우
+                double pitchSpread = (Math.random() - 0.5) * 0.4; // 상하
+
+                spread = spread.add(new Vector(yawSpread, pitchSpread, yawSpread)).normalize();
+                arrow.setVelocity(spread.multiply(2.0));
+            }
         }
     }
 }

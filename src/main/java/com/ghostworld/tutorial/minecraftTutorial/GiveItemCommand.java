@@ -36,6 +36,10 @@ public class GiveItemCommand implements CommandExecutor {
                 player.sendMessage("샷건 화살이 지금되었습니다!");
                 break;
 
+            case "bfc":
+                item = CustomItemFactory.createBigFuckingCrossbow();
+                player.sendMessage("BFC 제공완료!");
+                break;
             default:
                 player.sendMessage("알 수 없는 아이템 종류입니다. 사용법: /giveitem <sword|drill>");
                 return true;

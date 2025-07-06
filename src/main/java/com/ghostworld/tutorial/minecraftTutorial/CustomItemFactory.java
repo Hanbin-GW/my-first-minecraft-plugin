@@ -35,4 +35,11 @@ public class CustomItemFactory {
         item.setItemMeta(meta);
         return item;
     }
+    public static ItemStack createBigFuckingCrossbow(){
+        ItemStack item = new ItemStack(Material.CROSSBOW);
+        ItemMeta meta = item.getItemMeta();
+        meta.setDisplayName("BFC");
+        item.setItemMeta(meta);
+        return item;
+    }
 }
