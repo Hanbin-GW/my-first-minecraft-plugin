@@ -13,7 +13,7 @@ public class PlayerJoinListener implements Listener {
     public void onPlayerJoin(PlayerJoinEvent event) {
         Player player = event.getPlayer();
         Component prompt = Component.text("⚠ 서버 전용 리소스팩이 필요해요!");
-        player.setResourcePack("https://www.ghost-world.co.kr/static/GW_Resource_Pack/ghostcraft.zip", "0fbae6e139dddbb38ed65f4854cf35476cd86995",true);
+        player.setResourcePack("https://www.ghost-world.co.kr/static/GW_Resource_Pack/ghostcraft.zip", "c4b8c226c3caaadf943d490728b3e92fed245041",true);
         player.sendTitle("Hello " + player.getName() + "!", "Welcome to the server!", 10, 70, 20);
     }
 }
