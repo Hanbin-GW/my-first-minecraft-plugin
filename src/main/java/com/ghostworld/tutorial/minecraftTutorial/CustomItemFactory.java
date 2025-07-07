@@ -8,6 +8,15 @@ import org.bukkit.inventory.meta.ItemMeta;
 import java.util.List;
 
 public class CustomItemFactory {
+    public static ItemStack createTVPlacer() {
+        ItemStack item = new ItemStack(Material.STICK); // 또는 다른 아이템으로 변경 가능
+        ItemMeta meta = item.getItemMeta();
+        meta.setDisplayName("TV Placer");
+        meta.setLore(List.of("TV를 설치할 수 있는 특수 아이템입니다."));
+        meta.setCustomModelData(1001); // 리소스팩에서 custom_model_data 1001과 연동
+        item.setItemMeta(meta);
+        return item;
+    }
     public static ItemStack createLegendarySword() {
         ItemStack item = new ItemStack(Material.IRON_SWORD);
         ItemMeta meta = item.getItemMeta();

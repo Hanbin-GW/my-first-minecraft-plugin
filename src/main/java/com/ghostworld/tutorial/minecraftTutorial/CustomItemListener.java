@@ -3,10 +3,9 @@ package com.ghostworld.tutorial.minecraftTutorial;
 import net.kyori.adventure.key.Key;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
+import org.bukkit.Material;
 import org.bukkit.block.Block;
-import org.bukkit.entity.AbstractArrow;
-import org.bukkit.entity.Arrow;
-import org.bukkit.entity.Player;
+import org.bukkit.entity.*;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
@@ -37,6 +36,21 @@ public class CustomItemListener implements Listener {
         block.breakNaturally(item);
         player.swingMainHand();
     }
+
+    public void placeCustomBlock(Player player, Location loc) {
+        ItemDisplay display = (ItemDisplay) loc.getWorld().spawnEntity(loc, EntityType.ITEM_DISPLAY);
+        ItemStack item = new ItemStack(Material.IRON_INGOT);
+        item.getItemMeta().setCustomModelData(1001);
+        display.setItemStack(item);
+        display.setPersistent(true); // 서버 리로드 후에도 유지
+        display.setBrightness(new Display.Brightness(15, 15)); // 빛나는 효과
+    }
+
+    @EventHandler
+    public void onInteract(PlayerInteractEvent e) {
+        // 특정 블럭 위치에 오른쪽 클릭 시 삭제 처리 등
+    }
+
 
     @EventHandler
     public void onShoot(EntityShootBowEvent event) {
