@@ -34,6 +34,11 @@ public class CustomBlockPlacer implements Listener {
         noteBlock.setNote(new Note(5));  // 5는 노트 숫자
         target.setBlockData(noteBlock);
 
+        if (item.getAmount() > 1) {
+            item.setAmount(item.getAmount() - 1);
+        } else {
+            player.getInventory().setItemInMainHand(null);
+        }
         player.sendMessage("TV가 설치되었습니다!");
         event.setCancelled(true);
     }
